@@ -1,0 +1,25 @@
+[debug] [2020-12-06T14:25:41.902Z] ----------------------------------------------------------------------
+[debug] [2020-12-06T14:25:41.910Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nouss\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2020-12-06T14:25:41.911Z] CLI Version:   8.17.0
+[debug] [2020-12-06T14:25:41.911Z] Platform:      win32
+[debug] [2020-12-06T14:25:41.912Z] Node Version:  v12.18.3
+[debug] [2020-12-06T14:25:41.916Z] Time:          Sun Dec 06 2020 15:25:41 GMT+0100 (GMT+01:00)
+[debug] [2020-12-06T14:25:41.917Z] ----------------------------------------------------------------------
+[debug] [2020-12-06T14:25:41.917Z] 
+[debug] [2020-12-06T14:25:41.948Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-06T14:25:41.952Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators:  {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: "}}
+[debug] [2020-12-06T14:25:44.170Z] [hub] writing locator at C:\Users\Nouss\AppData\Local\Temp\hub-myprojectangular-76b21.json
+[info] 
+┌──────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your apps. │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────┬───────────┐
+│ Emulator │ Host:Port │
+└──────────┴───────────┘
+  Other reserved ports: 4400
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2020-12-06T14:27:20.280Z] Received signal SIGHUP 1

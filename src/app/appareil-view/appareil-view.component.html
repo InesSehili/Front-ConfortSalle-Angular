@@ -1,0 +1,23 @@
+<div class="col-xs-12">
+  <h2>les appareils sont lancés automatiquement</h2>
+  <ul class="list-group">
+    <app-mes-appareils *ngFor="let a of appareils ; let i = index"
+                       [appareilName]="a.name"
+                       [appareilStatus]="a.status"
+                       [index]="i"
+                       [id]="a.id">
+    </app-mes-appareils>
+
+  </ul>
+<!--  <button class="btn btn-success"
+          [disabled]="!isAuth"
+          (click)="onAllumer()">Tout allumer</button>-->
+  <!--<button class="btn btn-danger"
+          [disabled]="!isAuth"
+          (click)="onEteindre()">Tout éteindre</button>-->
+  <button class="btn btn-info"
+          (click)="onFetch()">Charger appareils</button>
+  <button class="btn btn-info"
+          (click)="getMovement()">Indiquer votre sortie svp</button>
+ 
+</div>

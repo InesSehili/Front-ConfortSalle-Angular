@@ -1,0 +1,25 @@
+
+<div class="row" *ngIf="!authStatus">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="onSignIn(f1)" #f1="ngForm">
+<div class="form-group">
+  <label for="email">
+    Email de l'enseiagnant
+  </label>
+  <input type="text" id="email" class="form-control" name="email" ngModel required>
+</div>
+<div class="form-group">
+  <label for="mdp">
+    Mot de passe
+  </label>
+  <input type="password" id="mdp" class="form-control" name="motDePasse" ngModel required>
+
+</div>
+<button class="btn btn-success" type="submit"  [disabled]="f1.invalid">Se connecter</button>
+
+
+    </form>
+  </div>
+</div>
+<button class="btn btn-danger" *ngIf="authStatus" (click)="onSignOut()">Se déconnecter</button>
+<h2 *ngIf="!authStatus" class="text-danger">{{error}}</h2>

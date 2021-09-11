@@ -1,0 +1,30 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': appareilStatus === 'allumé',
+                'list-group-item-danger': appareilStatus === 'éteint',
+                'list-group-item-warning': appareilStatus === 'automatique'}">
+
+  <h4 [ngStyle]="{color: getColor()}"> <img *ngIf="appareilName==='Lampe'"  src="https://img.icons8.com/fluent/96/000000/light-on.png"/> <img *ngIf="appareilName==='Climatiseur'"src="https://img.icons8.com/fluent/96/000000/air-conditioner.png"/>   <img  *ngIf="appareilName==='DataShow'" src= "/assets/img/DataShow.png"/> Statut : {{ getStatus() }}</h4>
+
+
+
+
+
+  <button class="btn btn-success"
+          *ngIf="appareilStatus === 'éteint'|| appareilStatus === 'automatique' "
+          (click)="onSwitch()">Allumer</button>
+  <button class="btn btn-danger"
+          *ngIf="appareilStatus === 'allumé' || appareilStatus === 'automatique'"
+          (click)="offSwitch()">Eteindre</button>
+  <button class="btn btn-warning"
+          *ngIf="(appareilStatus === 'allumé' || appareilStatus === 'éteint') && appareilName !=='DataShow' "
+          (click)="onAutomatique()">Automatique</button>
+  <p *ngIf="appareilName === 'Climatiseur'"><img  src="https://img.icons8.com/wired/40/000000/temperature-sensitive.png"/> : {{temp}}°C</p>
+
+
+
+    <button class="btn btn-info"  *ngIf="appareilName === 'Climatiseur'" (click)="onAugmenter()">+</button>
+    <button class="btn btn-info" *ngIf="appareilName === 'Climatiseur'"(click)="onDiminuer()">-</button>
+
+
+
+</li>
